@@ -2,6 +2,6 @@
 
 ## To use:
 
-Run the script with the file extension and project author as arguments:
+Run the script with the year (or range of years), file extension, and project author as arguments:
 
-`python3 check_files.py py Marquez`
+`python3 check_files.py 2018-2022 py Marquez`

@@ -3,8 +3,9 @@ def check_files():
     import os
     import sys
 
-    file_type = str(sys.argv[1])
-    author = str(sys.argv[2])
+    year = str(sys.argv[1])
+    file_type = str(sys.argv[2])
+    author = str(sys.argv[3])
     print(f'Checking all .{file_type} files...')
 
     paths = []
@@ -16,7 +17,7 @@ def check_files():
                 if f[-4:] == file_type:
                     path = os.path.join(root, f)
                     with open(path) as t:
-                        if f'Copyright 2018-2022 contributors to the {author} project' in t.read():
+                        if f'Copyright {year} contributors to the {author} project' in t.read():
                             continue
                         else:    
                             paths.append(path)
@@ -24,7 +25,7 @@ def check_files():
                 if f[-3:] == file_type:
                     path = os.path.join(root, f)
                     with open(path) as t:
-                        if f'Copyright 2018-2022 contributors to the {author} project' in t.read():
+                        if f'Copyright {year} contributors to the {author} project' in t.read():
                             continue
                         else:    
                             paths.append(path)    
@@ -32,7 +33,7 @@ def check_files():
                 if f[-2:] == file_type:
                     path = os.path.join(root, f)
                     with open(path) as t:
-                        if f'Copyright 2018-2022 contributors to the {author} project' in t.read():
+                        if f'Copyright {year} contributors to the {author} project' in t.read():
                             continue
                         else:
                             paths.append(path)            
