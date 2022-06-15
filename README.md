@@ -5,3 +5,7 @@
 Run the script with the year (or range of years), file extension, and project author as arguments:
 
 `python3 check_files.py 2018-2022 py Marquez`
+
+Note: the copyright statement must have the following format:
+
+`Copyright YEAR contributors to the AUTHOR project`
